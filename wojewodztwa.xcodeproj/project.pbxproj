@@ -10,6 +10,7 @@
 		5E39E8D28BD8C6175572E33A /* Pods_wojewodztwa_wojewodztwaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AD2A132A57E3F6F0AAC527C /* Pods_wojewodztwa_wojewodztwaUITests.framework */; };
 		7D6DAB0C9AF07D08A2B458BD /* Pods_wojewodztwaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756357BA42473433AFF0E47E /* Pods_wojewodztwaTests.framework */; };
 		9C479E839A9177D97811D520 /* Pods_wojewodztwa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA0AB2AE419E5EF1A777B96 /* Pods_wojewodztwa.framework */; };
+		F5922ADB28BB8D8000F021F2 /* VoivodshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5922ADA28BB8D8000F021F2 /* VoivodshipsViewModel.swift */; };
 		F59EEE4C28BB7E8200754D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE4B28BB7E8200754D5A /* AppDelegate.swift */; };
 		F59EEE4E28BB7E8200754D5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE4D28BB7E8200754D5A /* SceneDelegate.swift */; };
 		F59EEE5028BB7E8200754D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE4F28BB7E8200754D5A /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		AE9CBD2C8047A7375AE8E704 /* Pods-wojewodztwa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wojewodztwa.debug.xcconfig"; path = "Target Support Files/Pods-wojewodztwa/Pods-wojewodztwa.debug.xcconfig"; sourceTree = "<group>"; };
 		CC2C30293E4C6B5B4DC81866 /* Pods-wojewodztwaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wojewodztwaTests.debug.xcconfig"; path = "Target Support Files/Pods-wojewodztwaTests/Pods-wojewodztwaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE6A1F857B7943D88D102513 /* Pods-wojewodztwa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wojewodztwa.release.xcconfig"; path = "Target Support Files/Pods-wojewodztwa/Pods-wojewodztwa.release.xcconfig"; sourceTree = "<group>"; };
+		F5922ADA28BB8D8000F021F2 /* VoivodshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoivodshipsViewModel.swift; sourceTree = "<group>"; };
 		F59EEE4828BB7E8200754D5A /* wojewodztwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wojewodztwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59EEE4B28BB7E8200754D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F59EEE4D28BB7E8200754D5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +105,6 @@
 				CC2C30293E4C6B5B4DC81866 /* Pods-wojewodztwaTests.debug.xcconfig */,
 				54D4BDABECB180D72B2A08BA /* Pods-wojewodztwaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +184,7 @@
 		F59EEE7C28BB7E9B00754D5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5922ADA28BB8D8000F021F2 /* VoivodshipsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -443,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F59EEE5028BB7E8200754D5A /* ViewController.swift in Sources */,
+				F5922ADB28BB8D8000F021F2 /* VoivodshipsViewModel.swift in Sources */,
 				F59EEE4C28BB7E8200754D5A /* AppDelegate.swift in Sources */,
 				F59EEE8028BB7EDA00754D5A /* Voivodship.swift in Sources */,
 				F59EEE4E28BB7E8200754D5A /* SceneDelegate.swift in Sources */,

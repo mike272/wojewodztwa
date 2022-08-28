@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxDataSources
 
 struct Voivodship{
     var name:String
@@ -21,3 +23,16 @@ struct Voivodship{
     ]
 }
 
+//for RxDataSources integration
+struct SectionOfVoivodships{
+    var header:String
+    var items:[Item]
+}
+
+extension SectionOfVoivodships:SectionModelType{
+    typealias Item = Voivodship
+    init(original: SectionOfVoivodships, items: [Item]) {
+        self = original
+        self.items = items
+    }
+}

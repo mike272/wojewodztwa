@@ -6,37 +6,53 @@
 //
 
 import UIKit
+import RxDataSources
+import RxSwift
 
-let data = Voivodship.data
-class ViewController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
+class ViewController: UIViewController {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VoivodshipCell", for: indexPath)
-        var listConfig = cell.defaultContentConfiguration()
-        
-        listConfig.text = data[indexPath.row].name
-        listConfig.image = UIImage(named: data[indexPath.row].imageName)
-        listConfig.imageProperties.maximumSize = CGSize(width: 100, height: 100)
-        listConfig.imageProperties.cornerRadius = 20
-        
-        cell.contentConfiguration = listConfig
-        
-        return cell
-    }
+    //data source providing cells
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionOfVoivodships>(
+        configureCell: {
+            dataSource, tableView, indexPath, item in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "VoivodshipCell", for:  indexPath)
+            //getting default config for cell
+            var listConfig = cell.defaultContentConfiguration()
+            //modifying cell config
+            listConfig.text = item.name
+            listConfig.image = UIImage(named: item.imageName)
+            listConfig.imageProperties.maximumSize = CGSize(width: 100,height: 100)
+            //returning new config to cell
+            cell.contentConfiguration = listConfig
+            return cell
+        })
     
-
+    let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //get filter criteria
+        let searchFilter = searchBar.rx.text.orEmpty.debounce(.milliseconds(500), scheduler: MainScheduler.instance).distinctUntilChanged()
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "VoivodshipCell")
-        tableView.dataSource = self
+        
+        Observable.combineLatest(Observable.just(dataFromModel), searchFilter)
+            .map{
+                filteredVoivodships(filter: $0.1)
+            }.bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        
+        
     }
-
-
+    
+    
+    
 }
 
