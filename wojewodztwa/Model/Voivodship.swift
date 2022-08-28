@@ -15,4 +15,9 @@ struct Voivodship{
         self.name = _name
         self.imageName = _imageName
     }
+    static let data = [
+        Voivodship(_name: "Mazowieckie", _imageName: "mazowieckie"),
+        Voivodship(_name: "Podlaskie", _imageName: "podlaskie")
+    ]
 }
+
