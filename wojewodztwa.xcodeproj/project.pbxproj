@@ -16,6 +16,7 @@
 		F59EEE6328BB7E8500754D5A /* wojewodztwaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE6228BB7E8500754D5A /* wojewodztwaTests.swift */; };
 		F59EEE6D28BB7E8600754D5A /* wojewodztwaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE6C28BB7E8600754D5A /* wojewodztwaUITests.swift */; };
 		F59EEE6F28BB7E8600754D5A /* wojewodztwaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE6E28BB7E8600754D5A /* wojewodztwaUITestsLaunchTests.swift */; };
+		F59EEE8028BB7EDA00754D5A /* Voivodship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EEE7F28BB7EDA00754D5A /* Voivodship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F59EEE6828BB7E8600754D5A /* wojewodztwaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wojewodztwaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59EEE6C28BB7E8600754D5A /* wojewodztwaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wojewodztwaUITests.swift; sourceTree = "<group>"; };
 		F59EEE6E28BB7E8600754D5A /* wojewodztwaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wojewodztwaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F59EEE7F28BB7EDA00754D5A /* Voivodship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voivodship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,10 @@
 		F59EEE4A28BB7E8200754D5A /* wojewodztwa */ = {
 			isa = PBXGroup;
 			children = (
+				F59EEE7E28BB7EBD00754D5A /* View */,
+				F59EEE7D28BB7EA300754D5A /* Controller */,
+				F59EEE7C28BB7E9B00754D5A /* ViewModel */,
+				F59EEE7B28BB7E9100754D5A /* Model */,
 				F59EEE4B28BB7E8200754D5A /* AppDelegate.swift */,
 				F59EEE4D28BB7E8200754D5A /* SceneDelegate.swift */,
 				F59EEE4F28BB7E8200754D5A /* ViewController.swift */,
@@ -125,6 +131,35 @@
 				F59EEE6E28BB7E8600754D5A /* wojewodztwaUITestsLaunchTests.swift */,
 			);
 			path = wojewodztwaUITests;
+			sourceTree = "<group>";
+		};
+		F59EEE7B28BB7E9100754D5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F59EEE7F28BB7EDA00754D5A /* Voivodship.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F59EEE7C28BB7E9B00754D5A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F59EEE7D28BB7EA300754D5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F59EEE7E28BB7EBD00754D5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +295,7 @@
 			files = (
 				F59EEE5028BB7E8200754D5A /* ViewController.swift in Sources */,
 				F59EEE4C28BB7E8200754D5A /* AppDelegate.swift in Sources */,
+				F59EEE8028BB7EDA00754D5A /* Voivodship.swift in Sources */,
 				F59EEE4E28BB7E8200754D5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
