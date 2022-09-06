@@ -19,7 +19,17 @@ struct Voivodship{
     }
     static let data = [
         Voivodship(_name: "Mazowieckie", _imageName: "mazowieckie"),
-        Voivodship(_name: "Podlaskie", _imageName: "podlaskie")
+        Voivodship(_name: "Podlaskie", _imageName: "podlaskie"),
+        Voivodship(_name: "Kujawsko-Pomorskie", _imageName: "kujawsko-pomorskie"),
+        Voivodship(_name: "Lubuskie", _imageName: "lubuskie"),
+        Voivodship(_name: "Małopolska", _imageName: "malopolska"),
+        Voivodship(_name: "Opolskie", _imageName: "opolskie"),
+        Voivodship(_name: "Podkarpackie", _imageName: "podkarpackie"),
+        Voivodship(_name: "Śląskie", _imageName: "slaskie"),
+        Voivodship(_name: "Warmińsko-Mazurskie", _imageName: "warminsko-mazurskie"),
+        Voivodship(_name: "Wielkopolskie", _imageName: "wielkopolska"),
+
+        
     ]
 }
 
